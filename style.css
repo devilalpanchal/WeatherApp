@@ -3,8 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-image: url('kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
+.mainContainer{
+    background-image: url('./images/kenrick-mills-1h2Pg97SXfA-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
@@ -78,7 +78,7 @@ form{
 }
 .clouds{
     width: 40%;
-    margin-top: 50px;
+    margin-top: 35px;
     height: 30vh;
     color: blue;
     background-color: rgb(119, 171, 238);
@@ -133,3 +133,74 @@ left: 120px;
 font-weight: bolder;
 color: white;
   }
+  .sunrise{
+    border: 2px solid rgb(49, 20, 20);
+    height:22vh;
+    padding: 20px;
+    width: 40%;
+    border-radius: 10px;
+    color: rgb(121, 34, 34);
+    font-size: 25px;
+  }
+  .sunSet{
+    border: 2px solid rgb(49, 20, 20);
+    height:22vh;
+    padding: 20px;
+    width: 55%;
+    border-radius: 10px;
+    color: rgb(121, 34, 34);
+    font-size: 25px;
+  }
+  .Sunriseandset{
+    margin-top: 35px;
+display: flex;
+gap: 40px;
+  }
+  .cloudsAndLevel{
+    display: flex;
+    gap: 40px;
+  }
+  .level{
+    font-size: 20px;
+    width: 55%;
+    margin-top: 35px;
+    height: 30vh;
+    color: rgb(56, 4, 4);
+    background-color: rgb(119, 171, 238);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .level>h1{
+    padding: 10px;
+  }
+
+
+  /* to make cloud */
+
+  /* .cloud12{ 
+     margin-top:70px;
+     width:350px;
+     height:120px;
+     background:#ECEFF1;
+     box-shadow: 10px 10px rgba(0,0,0,0.2);
+     border-radius:100px;
+  }
+  .cloud12::after, .cloud::before{
+      content:"";
+      position:relative;
+      display:inline-block;
+      background:inherit;
+      border-radius:inherit;
+  }
+  .cloud12::after{
+      width:100px;
+      height:100px;
+      top:-220px;
+      left:50px;
+  }
+  .cloud12::before{
+      width:180px;
+      height:180px;
+      top: -70px;
+      left:130px;
+  } */

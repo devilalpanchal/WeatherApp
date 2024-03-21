@@ -2,17 +2,15 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
   let value = city.value;
   console.log(value);
-  let urls = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=ea48e8e8d002da56774c1298f773db7e`;
-  fetchData(urls);
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${value}&appid=ea48e8e8d002da56774c1298f773db7e`;
+  fetchData(url);
 });
 
 async function fetchData(url) {
   try {
     //   resovle logic
-    document.querySelector(
-      ".card-container"
-    ).innerHTML = `<h1 class="loading"></h1>`;
     let response = await fetch(url);
+    document.querySelector(".card-container").innerHTML = `<h1 class="loading"></h1>`;
     console.log(response);
     if (!response.ok) {
       document.querySelector(
@@ -28,7 +26,7 @@ async function fetchData(url) {
       <p class='spped'>Tempreture:-  &nbsp; ${data.main.temp}</p>    
       <p class='spped'>Wind-Speed:-  &nbsp; ${data.wind.speed}</p>  
       </div>  
-
+      <div class="cloudsAndLevel">
       <div class='clouds'>
       <p class='spped1'>Clouds :-  &nbsp; ${data.weather[0].description}</p>  
       <i class="fa-solid fa-cloud fa-flip-horizontal fa-2xl oneClode" style="color: #f4fafa;"></i>
@@ -39,10 +37,24 @@ async function fetchData(url) {
       <i class="fa-solid fa-cloud fa-flip-horizontal fa-2xs oneClode" style="color: #f4fafa;"></i>
       </div>
 
+      <div class="level">
+      <h1>Ground-level:-&nbsp; ${data.main.feels_like}</h1>
+      <h1>Fells-Like:-&nbsp;${data.main.grnd_level}</h1>
+      <h1>Sea-level:-&nbsp;${data.main.sea_level}</h1>
+      </div> 
 
-    
+    </div>
       
-      `;
+    
+      <div class="Sunriseandset"> 
+      <div class="sunrise">
+      <h1>Sunrise:-&nbsp; ${data.sys.sunrise}</h1>
+      </div> 
+      <div class="sunSet">
+      <h1>Sunset:- &nbsp; ${data.sys.sunset}</h1>
+      </div> 
+      </div> 
+    `;
     // ).innerHTML = `<h1>${JSON.stringify(data)}</h1>`
   } catch {
     // reject logic
