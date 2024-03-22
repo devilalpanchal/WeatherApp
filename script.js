@@ -29,7 +29,9 @@ async function fetchData(url) {
       <p class='spped'>Wind-Speed:-  &nbsp; ${data.wind.speed}</p>
       </div>  
       <div class="currentPagelocation">  
-     
+      <h1 class='cityName'>City Name:-</h1>
+      
+      <p class='spped2 region'>Region:-  &nbsp;</p>  
       <p class='spped2'>HostName:-  &nbsp; ${navigator.platform}</p>
       </div>  
 
@@ -68,6 +70,8 @@ async function fetchData(url) {
     (err) => {
       console.log(err);
     };
+fetchDetails();
+
   }
 }
 
@@ -86,14 +90,12 @@ async function fetchDetails() {
     // let lat = data.latitude;
     // let lon = data.longitude;
     let city = data.city;
+
     let region = data.region;
     // let organization = data.org;
-    document.querySelector(".currentPagelocation").innerHTML = 
-    `
-    <h1 class='cityName'>City Name:-${city}</h1>
-      
-    <p class='spped2'>Region:-  &nbsp; ${region  }</p>   
-    `
+    document.querySelector(".cityName").textContent = city
+    document.querySelector(".region").textContent = region
+   
    
   } catch (error) {
     console.error("Error:", error);
