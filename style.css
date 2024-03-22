@@ -20,11 +20,14 @@
 }
 .Wdasboard{
     background-color: rgb(61, 102, 238);
-    height: 50px;
+    height: 55px;
     padding: 10px;
     text-align: center;
     color: white;
     font-size: 30px;
+}
+.or{
+  text-align: center;
 }
 form{
     height: 83vh;
@@ -53,23 +56,38 @@ form{
     font-size: 20px;
     color: white;
 }
+#UseLocation{
+  padding: 8px;
+  background-color: rgb(117, 146, 51);
+  border: none;
+  font-size: 20px;
+  color: rgb(8, 0, 0);
+}
 .card-container{
     width: 70%;
     height: 83vh;
     margin: 20px;
 
 }
+.horiZontaLine{
+  color: #020202;
+  background-color: #020202;
+}
 .NameOftemAndWind{
-    width: 100%;
+    width: 99.5%;
     height:120px;
     background-color: rgb(115, 184, 184);
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    gap:5px;
+    /* flex-direction: column; */
+    gap:200px;
     padding-left: 50px;
 }
 .spped{
+    font-weight: bold;
+    color: rgb(225, 240, 11);
+}
+.spped2{
     font-weight: bold;
     color: rgb(225, 240, 11);
 }
@@ -83,7 +101,7 @@ form{
     color: blue;
     background-color: rgb(119, 171, 238);
     padding: 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 .spped1{
     padding: 10px;
@@ -138,7 +156,7 @@ color: white;
     height:22vh;
     padding: 20px;
     width: 40%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: rgb(121, 34, 34);
     font-size: 25px;
   }
@@ -147,7 +165,7 @@ color: white;
     height:22vh;
     padding: 20px;
     width: 55%;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: rgb(121, 34, 34);
     font-size: 25px;
   }
@@ -168,39 +186,12 @@ gap: 40px;
     color: rgb(56, 4, 4);
     background-color: rgb(119, 171, 238);
     padding: 20px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
   }
   .level>h1{
     padding: 10px;
   }
 
 
-  /* to make cloud */
 
-  /* .cloud12{ 
-     margin-top:70px;
-     width:350px;
-     height:120px;
-     background:#ECEFF1;
-     box-shadow: 10px 10px rgba(0,0,0,0.2);
-     border-radius:100px;
-  }
-  .cloud12::after, .cloud::before{
-      content:"";
-      position:relative;
-      display:inline-block;
-      background:inherit;
-      border-radius:inherit;
-  }
-  .cloud12::after{
-      width:100px;
-      height:100px;
-      top:-220px;
-      left:50px;
-  }
-  .cloud12::before{
-      width:180px;
-      height:180px;
-      top: -70px;
-      left:130px;
-  } */
+ 

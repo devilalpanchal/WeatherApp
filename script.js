@@ -19,12 +19,21 @@ async function fetchData(url) {
     }
     let data = await response.json();
     console.log(data);
+    // document.querySelector(".card-container").innerHTML += `// += karane par api data ke sath sath loading bhi aa Jayega or 
     document.querySelector(".card-container").innerHTML = `
       <div class='NameOftemAndWind'>
+      <div>  
       <h1 class='cityName'>City Name:-${data.name}</h1>
       <p class='spped'>Humidity:- &nbsp; ${data.main.humidity}</p>    
       <p class='spped'>Tempreture:-  &nbsp; ${data.main.temp}</p>    
-      <p class='spped'>Wind-Speed:-  &nbsp; ${data.wind.speed}</p>  
+      <p class='spped'>Wind-Speed:-  &nbsp; ${data.wind.speed}</p>
+      </div>  
+      <div class="currentPagelocation">  
+     
+      <p class='spped2'>HostName:-  &nbsp; ${navigator.platform}</p>
+      </div>  
+
+       
       </div>  
       <div class="cloudsAndLevel">
       <div class='clouds'>
@@ -44,8 +53,6 @@ async function fetchData(url) {
       </div> 
 
     </div>
-      
-    
       <div class="Sunriseandset"> 
       <div class="sunrise">
       <h1>Sunrise:-&nbsp; ${data.sys.sunrise}</h1>
@@ -63,3 +70,35 @@ async function fetchData(url) {
     };
   }
 }
+
+// to current location
+
+async function fetchDetails() {
+  try {
+    let url1 = "https://jsonip.com";
+    let response = await fetch(url1);
+    let data1 = await response.json();
+    let url2 = `https://ipapi.co/${data1.ip}/json/`;
+    let response1 = await fetch(url2);
+
+    let data = await response1.json();
+    console.log(data);
+    // let lat = data.latitude;
+    // let lon = data.longitude;
+    let city = data.city;
+    let region = data.region;
+    // let organization = data.org;
+    document.querySelector(".currentPagelocation").innerHTML = 
+    `
+    <h1 class='cityName'>City Name:-${city}</h1>
+      
+    <p class='spped2'>Region:-  &nbsp; ${region  }</p>   
+    `
+   
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+fetchDetails();
+ 
